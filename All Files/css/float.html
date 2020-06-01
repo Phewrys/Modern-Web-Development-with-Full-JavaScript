@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+    <!-- Float: permite o elemento flutuar -->
+    <style>
+        body {
+            background-color: #222;
+        }
+
+        .c1 {
+            background-color: red;
+            float: right;
+        }
+
+        .c2 {
+            background-color: green;
+            clear: right;
+            /* Float: Por padrão quando o elemento é flutuado, o elemento seguinte
+                      ocupa seu lugar. 
+               Clear: Utilizando o clear, isso não acontecerá.
+            */
+            clear: both; /* Limpa a flutuação da esquerda e direita. */
+        }
+        
+        .c3 {
+            background-color: blue;
+        }
+
+        .c4 {
+            background-color: orange;
+        }
+
+        div {
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+    <div class="c4"></div>
+</body>
+
+</html>

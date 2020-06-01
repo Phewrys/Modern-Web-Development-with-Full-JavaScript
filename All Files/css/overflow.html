@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Overflow</title>
+    <style>
+        div {
+            font-size: 40px;
+            height: 100px;
+            width: 260px;
+            border: solid 3px;
+            overflow: hidden; /* Tudo que extrapolar o elemento, será ocultado */
+            overflow: scroll; /* Adiciona navegação por barra de rolagem */
+            overflow-x: scroll; /* Barra de rolagem apenas no eixo x */
+            overflow-y: hidden; /* Oculta a barra de rolagem do eixo y */
+        }
+    </style>
+</head>
+<body>
+    <!-- Overflow: é quando o elemento filho extrapo-lá o tamanho do elemento pai
+    pai []
+    filho ...
+    overflow [.].. -->
+    <div>
+        TudoFuncionaMuitoBemEmCSS!!!
+        Texto muito grande para caber nessa div.
+        Já pensou qual será o comportamento padrão?
+    </div>
+</body>
+</html>
