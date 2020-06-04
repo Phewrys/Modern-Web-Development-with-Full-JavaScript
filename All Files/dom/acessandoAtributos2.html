@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <label for="compras">Compras</label>
+        <ul id="compras" destino='escritório' data-urgencia="5">
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartável</li>
+        </ul>
+    </div>
+    <script>
+        const lista = document.querySelector('div ul[destino="escritório"]') // Seleciona uma div que tem uma ul com a propriedade destino que tem o valor escritório.
+        console.log('Elemento "ul"...............')
+        console.log('childNodes', lista.childNodes)
+        console.log('destino', lista.destino)
+        console.log('getAttribute', lista.getAttribute('destino')) // getAttribute: É melhor que a notação . pois considera as propriedade personalizadas.
+        console.log('hasAttribute', lista.hasAttribute('destino')) // hasAttribute: Para saber se o atributo está presente de um determinado elemento.
+        lista.setAttribute('destino', 'empresa') // ('atributo', 'valor')
+        lista.setAttribute('status', 'aberto') // setAttribute também serve para adicionar atributos que não existe.
+        lista.removeAttribute('destino')
+        console.log(lista.dataset.urgencia) // dataset serve para ler atributos com o prexifo data-.  
+        lista.dataset.urgencia = 4
+        console.log(lista.getAttribute('data-urgencia'))
+
+        // cuidado
+        const label = document.querySelector('label')
+        console.log(label.for)
+        console.log(label.htmlFor) // Para acessar atributos com palavras reservadas, deve-se utilizar o prefixo html.
+        console.log(label.getAttribute('for'))
+    </script>
+</body>
+
+</html>
