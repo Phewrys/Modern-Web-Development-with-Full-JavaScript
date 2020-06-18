@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Modificando HTML #02</h1>
+    <div id='div1'>1</div>
+    <div id='div2'>2</div>
+    <div id='div3'>3</div>
+    <p class='numero'>4</p>
+    <p class='numero'>5</p>
+
+    <script>
+        $('#div1').append(', 2')
+        $('#div1').prepend('0, ')
+
+        $('<span>, 3</span>').appendTo('#div1') // Apenas inverte a ordem do append (primeiro o elemento que vai adicionar, depois o local onde será adicionado (No caso do appendTo, deve especificar o elemento)).
+        $('<span>-1, </span>').prependTo('#div1')
+
+        $('#div2').before('<p>Antes 2</p>') // Adiciona o elemento p, antes do elemento selecionar (#div2).
+        $('#div2').after('<p>Depois 2</p>')
+
+        $('<p>Antes 3</p>').insertBefore('#div3') // Apenas inverte a ordem do before.
+        $('<p>Depois 3</p>').insertAfter('#div3')
+
+        // $('p.numero').wrap('<div>') // Coloca cada elemento selecionado (p.numero) dentro de um elemento passado (div).
+        $('p.numero').wrapAll('<div id="div4">') // Coloca todos os elementos selecionados dentro de um único elemento passado.
+        $("#div4").empty() // Deixa o elemento selecionado vazio.
+        $('#div3, #div4').prev().remove() // Remove o elemento anterior da div3 e também o elemento anterior da div4.
+
+        // $('body > p').replaceWith('<div>Substituto</div>') // Substitui todos os p diretamente depois de body pelo elemento passado.
+        // $('<div>Substituto</div>').replaceAll('body > p')
+
+        // Seleciona o conteúdo ($(this).html()) do elemento ('body > p') e coloca dentro do elemento ('<div>'). (Semelhante ao wrap, só que melhor, pois ainda poder adicionar (append))).
+        $('body > p').replaceWith(function() {
+            return $('<div>').html($(this).html()).append('!!!')
+        })
+    </script>
+</body>
