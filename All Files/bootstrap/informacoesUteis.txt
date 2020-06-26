@@ -1,0 +1,23 @@
+npm i --save-dev jquery@3.3.1 -E // Instala o JQuery (o -E significa que  vai instalar a versão exata).
+npm i --save-dev popper.js@1.14.3 -E
+
+npm i // Instala as dependências.
+npm start // Inicia o projeto.
+
+Sites com templates utilizando bootstrap (baseado em alguma tecnologia especifica: angular, vue, react, ...).
+    https://wrapbootstrap.com/
+    https://www.creative-tim.com/
+
+
+Atalho: (header.cabecalho>h1)+(aside>nav>ul>li)
+
+        <header class="cabecalho">
+            <h1></h1>
+        </header>
+        <aside>
+            <nav>
+                <ul>
+                    <li></li>
+                </ul>
+            </nav>
+        </aside>
