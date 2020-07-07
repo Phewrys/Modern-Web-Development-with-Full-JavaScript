@@ -1,0 +1,21 @@
+npm i -g create-react-app
+    Cria a versão inicial da aplicação.
+
+create-react-app exercicios
+    Cria o projeto execicios.
+
+npm start
+    Inicia o projeto (tem que está dentro da pasta do projeto).
+
+React
+    É uma biblioteca que trabalha apenas com a camada de view.
+
+Nomes de componentes criados por você, obrigatoriamente começam com letra maiúscula.
+
+props
+    Nome utilizado para referência parâmetros/propriedades.
+
+
+COMPONENTES BASEADOS EM CLASSES
+- Tem estado.
+- Métodos de ciclo de vida.
