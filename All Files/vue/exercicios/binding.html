@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Binding</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+        <p>{{ link }}</p>
+        <p><a href="{{ link }}">Canal?</a></p>
+        <p><a v-bind:href="link">Canal</a></p>
+        <div><a :href="link">Canal</a></div> <!-- O mesmo da linha anterior. -->
+        <p>
+            <input type="text" v-model="nome"><br>
+            <span>{{ nome }}</span>
+        </p>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                nome: "Phewrys",
+                link: "https://youtube.com/cod3rcursos"
+            },
+            watch: { // Função que recebem o mesmo nome de atributo.
+                // Sempre que o valor do nome for alterado, essa função é chamada.
+                nome(novoValor) {
+                    console.log(novoValor.toUpperCase())
+                }
+            }
+        })
+    </script>
+</body>
+</html>

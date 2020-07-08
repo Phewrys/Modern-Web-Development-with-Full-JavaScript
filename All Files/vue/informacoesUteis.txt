@@ -1,0 +1,34 @@
+VueJS: é um framework.
+
+Vue instance: controla um trecho do HTML.
+
+Template: é a área do HTML que será controlado pelo Vue.
+
+el: elemento (o valor dessa propriedade é o seletor do elemento que você quer controlar).
+
+Dentro do Template é possivél colocar expressões javascript utilizando {{ ExpressãoAqui }}. Ex.: {{ 2 + 2 }}
+
+data: Aqui você define dados que podem ser acessados dentro do Template.
+
+computed: Valor calculado (realiza calculo com dados existentes).
+    *No HTML não dever ser chamado com função "nomeFuncao()" e sim com atributo "nomeFuncao".
+
+watch: Funções que recebem o mesmo nome de atributo. É chamada sempre que um determinado valor é alterado.
+
+
+v-nomeDiretiva
+    É uma propriedade presonalizada (conhecida dentro do Vue com diretiva).
+
+v-bind:nomePropriedade
+    É uma diretiva, que indica que o conteúdo dessa propriedade será interpolado (lido pelo vue).
+    :nomePropriedade    *Também funciona dessa forma.
+
+v-model
+    Atualização em duas direções (ou bind bidirecional).
+
+v-on
+    Diretiva que chama um método quando aconteçe um determinado evento.
+    Ex: v-on:nomeEvento="nomeMetodo"
+    Ex: v-on:click="add"
+    @click="add"    *Também funciona dessa forma.
+

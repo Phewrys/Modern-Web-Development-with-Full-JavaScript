@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+        <p>{{ contador }}</p>
+        <p>
+            <button v-on:click="add">+1</button>
+            <button @click="add">+1</button> <!-- O mesmo da linha anterior. -->
+            <button @click="contador -= 2">-2</button> <!-- Utilizando uma expressão simples. -->
+        </p>
+        <p @mousemove="atualizarPosicao">
+            Coordenadas: {{x}} e {{y}}
+            <!-- <span @mousemove.stop>Aqui Não</span> // Aqui o evento não funciona. -->
+            <span @mousemove="stop">Aqui Não</span> <!-- O mesmo da linha anterior utilizando a função stop. -->
+        </p>
+        <input type="text" @keyup.enter="alerta"> <!-- Chama a função alerta quando a tecla enter é pressionada. -->
+        <input type="text" @keyup.t="alerta"> <!-- Chama a função alerta quando a tecla t é pressionada. -->
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                x: 0,
+                y: 0,
+                contador: 0
+            },
+            methods: {
+                add() {
+                    this.contador++
+                },
+                atualizarPosicao(e) {
+                    this.x = e.clientX
+                    this.y = e.clientY
+                },
+                stop(e) {
+                    e.stopPropagation()
+                },
+                alerta() {
+                    alert('Enter!')
+                }
+            }
+        })
+    </script>
+</body>
+</html>

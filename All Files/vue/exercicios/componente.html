@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Componente</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+        <saudacao nome="Ana"></saudacao>
+        <saudacao nome="Bia"></saudacao>
+        <saudacao nome="Julia"></saudacao>
+        <negrito nome="Phewrys" idade="25"></negrito>
+    </div>
+    <script>
+        Vue.component('saudacao', { // Criando o componente.
+            props: ['nome'],
+            template: `
+                <div>Bom dia {{ nome }}!</div>
+            `
+        })
+
+        Vue.component('negrito', {
+            props: ['nome', 'idade'],
+            template: `
+                <div>
+                    <div> Name: <strong> {{ nome }}! </strong></div> 
+                    <div> Age: <strong> {{ idade }}! </strong></div> 
+                </div>
+            `
+        })
+
+        new Vue({
+            el: "#app"
+        })
+    </script>
+</body>
+</html>
