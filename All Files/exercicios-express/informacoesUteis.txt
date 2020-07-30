@@ -1,0 +1,52 @@
+npm init -y
+    Instala o package.json
+
+npm i --save express
+    Instala o express
+
+CTRL + c
+    Encerra a aplicação.
+
+node index.js
+    Rota a aplicação
+
+npm i --save-dev nodemon
+    Instala o nodemon (o nodemon é usado para aplicações em desenvolvimento).
+
+nodemon index.js
+    Roda a aplicação e atualiza sempre que houver alteração.
+    rs
+        Re-inicia o nodemon.
+
+npm start
+    Também executa o nodemon.
+
+npm i --save pm2
+    Instala o PM2
+
+pm2 start app.js
+    Roda o pm2 (o pm2 é usado para aplicações em produção).
+
+npm run production
+    Roda o pm2
+
+npm i -g pm2
+    Instala o pm2 de forma Global.
+
+pm2 monit
+    Abre uma interface de monitoramento.
+
+pm2 status
+
+pm2 show 0
+
+pm2 restart 0
+
+pm2 stop 0
+
+pm2 kill
+
+Middleware: é uma função que recebe (requisição, resposta, next).
+
+npm i --save body-parser
+    Instala
